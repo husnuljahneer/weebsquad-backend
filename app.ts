@@ -1,1 +1,3 @@
-import "./src/server/index.ts";
+import App from "./src/server/";
+const server = new App();
+server.listen();
