@@ -33,6 +33,9 @@ class App {
       .on("error", (err: string) => {
         console.log(colors.red(err));
       });
+    this.app.get("*", (req, res) => {
+      res.json({ success: false, errorCode: 404, message: "Invalid Route" });
+    });
   }
 }
 export default App;
