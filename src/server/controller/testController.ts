@@ -1,6 +1,5 @@
 const { test } = require("../services/testService");
-
-exports.test = (req: any, res: any) => {
-  test();
-  res.json({ success: true, message: "test" });
+import { NextFunction } from "express";
+exports.test = (req: any, res: any, next: NextFunction) => {
+  test(req, res, next);
 };
